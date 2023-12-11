@@ -1,20 +1,19 @@
-defmodule TableauDemoEex.RootLayout do
+defmodule TableauDemoHeex.RootLayout do
   use Tableau.Layout
-
-  import TableauDemoEex
+  use Phoenix.Component
 
   def template(assigns) do
     ~H"""
     <!DOCTYPE HTML>
-
     <html>
       <head>
         <title>Tableau EEx Demo</title>
       </head>
       <body>
-        <%= render @inner_content %>
+        <%= render(@inner_content) %>
       </body>
     </html>
     """
+    |> Phoenix.HTML.Safe.to_iodata()
   end
 end

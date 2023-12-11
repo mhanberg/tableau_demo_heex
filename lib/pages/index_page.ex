@@ -1,12 +1,17 @@
-defmodule TableauDemoEex.IndexPage do
-  use Tableau.Page, layout: TableauDemoEex.RootLayout, permalink: "/"
+defmodule TableauDemoHeex.IndexPage do
+  use Tableau.Page, layout: TableauDemoHeex.RootLayout, permalink: "/"
+  use Phoenix.Component
 
-  import TableauDemoEex
-
-  def template(_assigns) do
+  def template(assigns) do
     ~H"""
     <h3>Hello World!</h3>
 
+    <.banner />
+    """
+  end
+
+  def banner(assigns) do
+    ~H"""
     <p>
       Welcome to your first Tableau Site!
     </p>
