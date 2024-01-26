@@ -14,7 +14,7 @@ defmodule TableauDemoHeex.RootLayout do
         <%= render(@inner_content) %>
       </body>
       <%= if Mix.env() == :dev do %>
-        <%= {:safe, Tableau.live_reload(assigns)} %>
+        <TableauDemoHeex.live_reload />
       <% end %>
     </html>
     """
