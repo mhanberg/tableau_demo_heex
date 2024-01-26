@@ -4,7 +4,7 @@ defmodule TableauDemoHeex.IndexPage do
 
   def template(assigns) do
     ~H"""
-    <h3>Hello World!</h3>
+    <h3 class="text-xl font-bold">Hello World!</h3>
 
     <.banner />
     """

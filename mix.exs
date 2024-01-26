@@ -30,7 +30,7 @@ defmodule TableauDemoHeex.MixProject do
 
   def aliases() do
     [
-      build: ["tableau.build", "tailwind default --minify", "deploy"],
+      build: ["tableau.build", "tailwind default --minify"],
       serve: ["tableau.server"]
     ]
   end

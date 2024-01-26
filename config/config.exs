@@ -14,10 +14,11 @@ config :tailwind,
   version: "3.3.5",
   default: [
     args: ~w(
-    --config=assets/tailwind.config.js
-    --input=assets/css/app.css
-    --output=_site/css/site.css
-    )
+    --config=tailwind.config.js
+    --input=css/app.css
+    --output=../_site/css/site.css
+    ),
+    cd: Path.expand("../assets", __DIR__)
   ]
 
 config :tableau, :assets, tailwind: {Tailwind, :install_and_run, [:default, ~w(--watch)]}
