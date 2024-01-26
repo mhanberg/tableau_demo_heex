@@ -12,6 +12,9 @@ defmodule TableauDemoHeex.RootLayout do
       <body>
         <%= render(@inner_content) %>
       </body>
+      <%= if Mix.env() == :dev do %>
+        <%= {:safe, Tableau.live_reload(assigns)} %>
+      <% end %>
     </html>
     """
     |> Phoenix.HTML.Safe.to_iodata()
