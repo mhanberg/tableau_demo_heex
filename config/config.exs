@@ -10,4 +10,16 @@ config :tableau, :reloader,
     ~r"_site/.*.css"
   ]
 
+config :tailwind,
+  version: "3.3.5",
+  default: [
+    args: ~w(
+    --config=assets/tailwind.config.js
+    --input=assets/css/app.css
+    --output=_site/css/site.css
+    )
+  ]
+
+config :tableau, :assets, tailwind: {Tailwind, :install_and_run, [:default, ~w(--watch)]}
+
 import_config "#{Mix.env()}.exs"
