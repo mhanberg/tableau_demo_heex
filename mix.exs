@@ -21,7 +21,7 @@ defmodule TableauDemoHeex.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:tableau, "~> 0.12"},
+      {:tableau, "~> 0.15"},
       {:phoenix_live_view, "~> 0.20.1"},
       {:tailwind, "~> 0.2", runtime: Mix.env() == :dev}
 
